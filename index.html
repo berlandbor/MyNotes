@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Записная книжка в браузере</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Личная записная книжка</h1>
+        <p>Все созданные вами заметки храняться локально в базе данных браузера. Через функцию: localStorage. О ней можно прочитать <a href="https://berlandbor.github.io/MyBlog/7.html">здесь.</a> </p>
+        
+        <input id="noteTitle" placeholder="Введите заголовок" />
+        <textarea id="noteContent" placeholder="Введите свои заметки..."></textarea>
+        <button id="saveBtn">Сохранить заметку</button>
+        <hr>
+        <button id="clearBtn">Очистить поля</button>
+
+        <h2>Список заметок</h2>
+        <ul id="notesList"></ul>
+
+        <div id="storageStatus">
+            <p><strong>Использовано памяти в Б. Д.:</strong> <span id="usedSpace">0</span> из 5000 KB</p>
+            <p id="warning" style="color: red;"></p>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDate"></p>
+            <p id="modalContent"></p>
+            <button id="deleteBtn">Удалить заметку</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
